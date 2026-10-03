@@ -1,0 +1,21 @@
+{
+  "name": "dp-polyline-service",
+  "version": "1.0.0",
+  "description": "离线平面折线 Douglas-Peucker 简化与误差核验后端（API + CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --no-warnings --test \"dist/test/*.test.js\"",
+    "start": "node --no-warnings dist/src/server.js",
+    "demo": "node --no-warnings dist/src/cli.js demo",
+    "cli": "node --no-warnings dist/src/cli.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
